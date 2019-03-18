@@ -1,0 +1,8 @@
+h1 ユーザー登録
+
+- if @user.errors.present?
+    ul#error_explanation
+        - @user.errors.full_messages.each do |message|
+            li = message
+
+= render partial: 'form', locals: {user:@user}
